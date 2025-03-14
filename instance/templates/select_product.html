@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Product</title>
+</head>
+<body class="select-product-page">
+     <h1>Select Product</h1>
+    <form action="/sales_receipt" method="post">
+    <label for="buyer_name">Buyer's Name:</label>
+    <input type="text" id="buyer_name" name="buyer_name"><br><br>
+    {% for product in products %}
+        <input type="checkbox" id="product_{{ product.id }}" name="selected_products" value="{{ product.id }}">
+        <label for="product_{{ product.id }}">{{ product.name }}</label>
+        <input type="number" id="quantity_{{ product.id }}" name="quantity_{{ product.id }}" value="1">
+        <input type="number" id="sale_price_{{ product.id }}" name="sale_price_{{ product.id }}" value="{{ product.sale_price }}">
+        <br><br>
+    {% endfor %}
+    <input type="submit" value="Generate Receipt">
+</form>
+
+</body>
+</html>
+
+</body>
+</html>

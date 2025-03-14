@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>View Receipts</h1>
+    <ul>
+    {% for receipt in receipts %}
+        <li><a href="{{ url_for('view_receipt', filename=receipt) }}">{{ receipt }}</a></li>
+    {% endfor %}
+    </ul>
+
+</body>
+</html>

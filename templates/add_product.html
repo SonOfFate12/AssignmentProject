@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Products</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="add-product-form">
+        <h1>Add Product</h1>
+        <form method="POST" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <label>{{ form.name.label }}</label>
+            {{ form.name() }}
+            <label>{{ form.description.label }}</label>
+            {{ form.description() }}
+            <label>{{ form.cost_price.label }} (UGX)</label>
+            {{ form.cost_price() }}
+            <label>{{ form.sale_price.label }} (UGX)</label>
+            {{ form.sale_price() }}
+            <label>{{ form.quantity.label }}</label>
+            {{ form.quantity() }}
+            <label>{{ form.image.label }}</label>
+            {{ form.image() }}
+            {{ form.submit() }}
+        </form>
+    </div>
+</body>
+
+</body>
+</html>

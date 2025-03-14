@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+    {% block content %}
+    <div class="edit-product-form-container">
+        <h1 style="color: #2196F3;">Edit Product</h1>
+        <form action="" method="post" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            {{ form.name.label }}
+            {{ form.name() }}
+            <br>
+            {{ form.description.label }}
+            {{ form.description() }}
+            <br>
+            {{ form.cost_price.label }}
+            {{ form.cost_price() }}
+            <br>
+            {{ form.sale_price.label }}
+            {{ form.sale_price() }}
+            <br>
+            {{ form.quantity.label }}
+            {{ form.quantity() }}
+            <br>
+            {{ form.image.label }}
+            {{ form.image() }}
+            <br>
+            {{ form.submit() }}
+            <button class="cancel-button" type="submit" name="cancel" value="true">Cancel</button>
+        </form>
+    </div>
+    {% endblock %}
+
+</body>
+</html>
+
+</body>
+</html>

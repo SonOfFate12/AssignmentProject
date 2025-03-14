@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+ <div class="receipt-container">
+        <div class="receipt-header">
+            <h2>H & S COMPUTER WORLD</h2>
+            <h2>AND ELECTRONICS HUB</h2>
+            <h1>Sales Receipt</h1>
+            <h4>Location: Hardware Street, Namayingo</h4>
+            <p>
+                <b>0779486100 &emsp; 0703944074</b>
+            </p>
+            <p>
+                <b>0774915308 &emsp; 0701095903</b>
+            </p>
+        </div>
+        <div class="receipt">
+            <h2>Sales Receipt</h2>
+            <p>Buyer Name: {{ receipt_data.buyer_name }}</p>
+            <p>Date: {{ receipt_data.date.strftime('%Y-%m-%d %H:%M:%S') }}</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Quantity</th>
+                        <th>Sale Price</th>
+                        <th>Total Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for product in receipt_data.products %}
+                    <tr>
+                        <td>{{ product.product_name }}</td>
+                        <td>{{ product.quantity }}</td>
+                        <td>{{ product.sale_price }}</td>
+                        <td>{{ product.total_amount }}</td>
+                    </tr>
+                    {% endfor %}
+                    <tr>
+                        <td colspan="3">Total:</td>
+                        <td>{{ receipt_data.total_amount }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <form action="" method="post">
+                <input type="hidden" name="buyer_name" value="{{ receipt_data.buyer_name }}">
+                <input type="hidden" name="product_name[]" value="{% for product in receipt_data.products %}{{ product.product_name }}{% endfor %}">
+                <input type="hidden" name="quantity[]" value="{% for product in receipt_data.products %}{{ product.quantity }}{% endfor %}">
+                <input type="hidden" name="sale_price[]" value="{% for product in receipt_data.products %}{{ product.sale_price }}{% endfor %}">
+                <input type="hidden" name="total_amount[]" value="{% for product in receipt_data.products %}{{ product.total_amount }}{% endfor %}">
+                <button type="submit" name="action" value="save_exit">Save and Exit</button>
+                <button type="submit" name="action" value="print_receipt">Print</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

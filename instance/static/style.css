@@ -1,0 +1,640 @@
+body {
+    background-color: #2E4053; /* dark blue */
+    font-family: Arial, sans-serif;
+}
+
+/* Start of Home Page Style */
+.circle-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.circle {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: #FFFFFF; /* white */
+    border: 20px solid #FF9900; /* dark orange */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content {
+    color: #2E4053; /* dark blue */
+    text-align: center;
+    padding: 20px;
+}
+
+.content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.button {
+    background-color: #FF9900; /* dark orange */
+    color: #FFFFFF; /* white */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #FFA07A; /* light orange */
+}
+/* End of Home Page Style */
+
+/* Start of Login Page Style */
+.login-container {
+    width: 300px;
+    margin: 50px auto;
+    background-color: #FFFFFF; /* white */
+    padding: 20px;
+    border: 1px solid #2E4053; /* dark blue */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* light shadow */
+    text-align: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    color: #2E4053; /* dark blue */
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+}
+
+input[type="text"], input[type="password"] {
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #FF9900; /* dark orange */
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #FF9900; /* dark orange */
+    color: #FFFFFF; /* white */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #FFA07A; /* light orange */
+}
+
+a {
+    color: #FF9900; /* dark orange */
+}
+
+a:hover {
+    color: #FFA07A; /* light orange */
+}
+/* END of Login Page */
+
+/* Start of Registration Page */
+.register-container {
+    width: 300px;
+    margin: 50px auto;
+    background-color: #FFFFFF; /* white */
+    padding: 20px;
+    border: 1px solid #2E4053; /* dark blue */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* light shadow */
+    text-align: center;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+label {
+    color: #2E4053; /* dark blue */
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+    padding-left: 10px;
+}
+
+input[type="text"], input[type="password"] {
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #FF9900; /* dark orange */
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #FF9900; /* dark orange */
+    color: #FFFFFF; /* white */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #FFA07A; /* light orange */
+}
+
+a {
+    color: #FF9900; /* dark orange */
+}
+
+a:hover {
+    color: #FFA07A; /* light orange */
+}
+/* End of Register Page Css */
+
+/* Media queries */
+
+/* Mobile devices (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+    .register-container {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
+/* Tablets (min-width: 769px) and (max-width: 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .register-container {
+        width: 80%;
+        margin: 30px auto;
+    }
+}
+
+/* Desktop devices (min-width: 1025px) */
+@media only screen and (min-width: 1025px) {
+    .register-container {
+        width: 60%;
+        margin: 40px auto;
+    }
+}
+/* End of Media Query CSS */
+
+/* Start of DashBoard CSS */
+.dashboard-body {
+            top: 0;
+            right: 0;
+            max-width: 1020px;
+            margin: 0px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #03055B;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-right: 0px; /* Same width as the sidebar */
+            width: auto; /* Automatically adjust the width */
+            flex-grow: 1; /* Take up the remaining space */
+        }
+
+        h1 {
+            color: #03055B;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: #FF8C00;
+        }
+
+        a:hover {
+            color: #FFA07A;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #03055B;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #03055B;
+            color: #fff;
+        }
+
+        td {
+            background-color: #fff;
+        }
+
+        .product-image {
+            width: 100px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #03055B;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: #FF8C00;
+        }
+
+        a:hover {
+            color: #FFA07A;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #03055B;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #03055B;
+            color: #fff;
+        }
+
+        td {
+            background-color: #fff;
+        }
+
+        .product-image {
+            width: 100px;
+            height: auto;
+            border-radius: 10px;
+        }
+/* End of DashBoard CSS */
+
+/* Start of Add products CSS */
+.add-product-form {
+            width: 50%;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #2f4f7f; /* Dark Blue */
+            border: 1px solid #2f4f7f;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #ffffff; /* White */
+        }
+
+        .add-product-form label {
+            display: block;
+            margin-bottom: 10px;
+            color: #ff9900; /* Dark Orange */
+            font-weight: bold;
+        }
+
+        .add-product-form input, .add-product-form select {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ff9900; /* Dark Orange */
+            border-radius: 5px;
+            background-color: #ffffff; /* White */
+            color: #2f4f7f; /* Dark Blue */
+        }
+
+        .add-product-form input[type="submit"] {
+            background-color: #ff9900; /* Dark Orange */
+            color: #2f4f7f; /* Dark Blue */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-product-form input[type="submit"]:hover {
+            background-color: #ff8b00; /* Slightly lighter Dark Orange */
+        }
+
+        .add-product-form h1 {
+            text-align: center;
+            color: #ffffff; /* White */
+        }
+        /* End of Add products CSS */
+
+        /* Start of Edit products CSS */
+         .edit-product-form-container {
+            width: 50%;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #FFFFFF; /* White background */
+            border: 1px solid #2196F3; /* Dark blue border */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .edit-product-form-container label {
+            display: block;
+            margin-bottom: 10px;
+            color: #FF9900; /* Dark orange */
+        }
+
+        .edit-product-form-container input[type="text"],
+        .edit-product-form-container input[type="number"],
+        .edit-product-form-container select {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #CCCCCC;
+        }
+
+        .edit-product-form-container input[type="submit"] {
+            background-color: #FF9900; /* Dark orange */
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .edit-product-form-container input[type="submit"]:hover {
+            background-color: #FFC107; /* Light orange */
+        }
+
+        .edit-product-form-container .cancel-button {
+            background-color: #2196F3; /* Dark blue */
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .edit-product-form-container .cancel-button:hover {
+            background-color: #1976D2; /* Darker blue */
+        }
+        /* End of Edit product CSS */
+
+        /* Start of Sales receipt CSS */
+        .receipt-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #03055B; /* dark blue */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #FFFFFF; /* white */
+}
+
+.receipt-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.receipt-details {
+    margin-bottom: 20px;
+}
+
+.receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.receipt-table th, .receipt-table td {
+    border: 1px solid #03055B; /* dark blue */
+    padding: 10px;
+    text-align: left;
+    background-color: #FFFFFF; /* white */
+}
+
+.receipt-table th {
+    background-color: #03055B; /* dark blue */
+    color: #FFFFFF; /* white */
+}
+
+.receipt-total {
+    text-align: right;
+    margin-top: 20px;
+}
+        /* End of sales receipt CSS */
+
+ /* Start of Select Products CSS */
+.select-product-page {
+    background-color: #03055B; /* dark blue */
+    color: #fff; /* white */
+    font-family: Arial, sans-serif;
+}
+
+.select-product-page .container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff; /* white */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.select-product-page .title {
+    color: #FF9900; /* dark orange */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.select-product-page .form {
+    display: flex;
+    flex-direction: column;
+}
+
+.select-product-page .form-group {
+    margin-bottom: 20px;
+}
+
+.select-product-page .label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #03055B; /* dark blue */
+}
+
+.select-product-page .input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #03055B; /* dark blue */
+    background-color: #fff; /* white */
+}
+
+.select-product-page .checkbox {
+    margin-right: 10px;
+}
+
+.select-product-page .product-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.select-product-page .product-name {
+    font-size: 16px;
+    margin-right: 20px;
+    color: #03055B; /* dark blue */
+}
+
+.select-product-page .quantity, .select-product-page .sale-price {
+    width: 100px;
+}
+
+.select-product-page .submit-btn {
+    background-color: #FF9900; /* dark orange */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.select-product-page .submit-btn:hover {
+    background-color: #FFA07A; /* lighter dark orange */
+}
+        /* End of select products CSS */
+
+        /* Start of Sidebar CSS */
+         .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #03055B; /* Dark blue */
+    color: #fff; /* White */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    color: #FF9900; /* Dark orange */
+}
+
+.sidebar a {
+    color: #fff; /* White */
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    color: #FF9900; /* Dark orange */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 10px;
+    border-bottom: 1px solid #FF9900; /* Dark orange */
+}
+
+.sidebar li:last-child {
+    border-bottom: none;
+}
+
+.main-content {
+    margin-left: 200px;
+    padding: 20px;
+}
+        /* End of Sidebar CSS */
+
+        .search-dashboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-form {
+    flex-grow: 1;
+}
+
+.dashboard-link {
+    background-color: #FF9900; /* Dark orange */
+    color: #fff; /* White */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* fixed position */
+.fixed-header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 1;
+}
+
+table {
+    margin-top: 20px;
+}
+/* end of fixed position */
+
+/*  Start of sales receipt form CSS */
+.receipt-title {
+    color: #FFFFFF; /* white */
+    text-align: center;
+}
+
+.receipt-form {
+    background-color: #333333; /* white */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.receipt-form label {
+    color: #FF9900; #FFFFFF; /* white */
+}
+
+.receipt-form input, .receipt-form select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.receipt-form button {
+    background-color: #03055B; /* dark blue */
+    color: #FF9900; #FFFFFF; /* white */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.receipt-form button:hover {
+    background-color: #0343DF; /* lighter dark blue */
+}
+/* End of sales receipt CSS */
+
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+<div class="receipt-container">
+        <div class="receipt-header">
+            <h2>H & S COMPUTER WORLD</h2>
+            <h2>AND ELECTRONICS HUB</h2>
+            <h1>Sales Receipt</h1>
+            <h4>Location: Hardware Street, Namayingo</h4>
+        </div>
+        <div class="receipt-details">
+            <p><b>Date:</b> 2025-03-08 14:40:01</p>
+            <p><b>Buyer's Name:</b> sande</p>
+        </div>
+        <table class="receipt-table">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Sale Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>fans</td>
+                    <td>1</td>
+                    <td>80020.0</td>
+                    <td>80020.0</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="receipt-total">
+            <p><b>Total:</b> 80020.0</p>
+        </div>
+    <form action="/save_receipt" method="post">
+        <input type="hidden" name="buyer_name" value="sande">
+        <input type="hidden" name="product_name" value="fans">
+        <input type="hidden" name="quantity" value="1">
+        <input type="hidden" name="sale_price" value="80020.0">
+        <input type="hidden" name="total_amount" value="80020.0">
+        <input type="hidden" name="date" value="2025-03-08 14:40:01">
+        <input type="submit" value="Save Receipt and Exit">
+    </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+ <div class="receipt-container">
+        <div class="receipt-header">
+            <h2>H & S COMPUTER WORLD</h2>
+            <h2>AND ELECTRONICS HUB</h2>
+            <h1>Sales Receipt</h1>
+            <h4>Location: Hardware Street, Namayingo</h4>
+            <b><p>
+                <b> 0779486100 &emsp; 0703944074 </b>
+            </p>
+            <p>
+                <b> 0774915308 &emsp; 0701095903 </b>
+            </p>
+        </div>
+        <div class="receipt-details">
+            <p><b>Date:</b> 2025-03-09 23:50:36</p>
+            <p><b>Buyer's Name:</b> sande</p>
+        </div>
+        <form id="receipt-form">
+            <table class="receipt-table">
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Quantity</th>
+                        <th>Sale Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>fans</td>
+                        <td>2</td>
+                        <td><input type="number" id="sale-price" name="sale_price" value="500000"></td>
+                        <td id="total-price">1000000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <div class="receipt-total">
+            <p><b>Total:</b> <span id="total-amount">1000000</span></p>
+        </div>
+        <form action="/save_receipt" method="post">
+            <input type="hidden" name="buyer_name" value="sande">
+            <input type="hidden" name="product_name" value="fans">
+            <input type="hidden" name="quantity" value="2">
+            <input type="hidden" name="sale_price" id="sale-price-hidden" value="500000">
+            <input type="hidden" name="total_amount" id="total-amount-hidden" value="1000000">
+            <input type="hidden" name="date" value="2025-03-09 23:50:36">
+            <input type="submit" value="Save Receipt and Exit">
+        </form>
+        <script>
+            const salePriceInput = document.getElementById('sale-price');
+            const totalPriceTd = document.getElementById('total-price');
+            const totalAmountSpan = document.getElementById('total-amount');
+            const salePriceHiddenInput = document.getElementById('sale-price-hidden');
+            const totalAmountHiddenInput = document.getElementById('total-amount-hidden');
+            const quantity = 2;
+
+            salePriceInput.addEventListener('input', () => {
+                const salePrice = parseFloat(salePriceInput.value);
+                fetch('/receipt', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                    body: `sale_price=${salePrice}&quantity=${quantity}`
+                })
+                .then(response => response.json())
+                .then(data => {
+                    totalPriceTd.innerText = data.total_amount;
+                    totalAmountSpan.innerText = data.total_amount;
+                    salePriceHiddenInput.value = salePrice;
+                    totalAmountHiddenInput.value = data.total_amount;
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>
